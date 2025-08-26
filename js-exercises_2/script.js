@@ -1,12 +1,11 @@
-function demo(input) {
-
+function demo (input) {
   let number = Number(input[0]);
-
-  if (number % 2 === 0) {
-    console.log('even');
+  let isEvenNumber = number % 2 === 0;
+  
+  if (isEvenNumber) {
+    console.log("even");
   } else {
-    console.log('odd');
+    console.log("odd");
   }
-
 }
-demo(['12']);
+demo(["12"]);
