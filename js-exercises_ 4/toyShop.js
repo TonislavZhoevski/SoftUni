@@ -21,16 +21,24 @@ function toyShop (input) {
 
   moneyFromToys = moneyFromToys * 0.90;
 
-  if (moneyFromToys > price) {
-    let diff = moneyFromToys - price; 
+  // Math.abs(argument) serves to turn any value into positive one, regardless of the result - even if it's negative.
+  let diff = Math.abs(moneyFromToys - price);
+  if (moneyFromToys >= price) { 
     console.log(`Yes! ${diff.toFixed(2)} lv left.`);
   } else {
-    let diff = price - moneyFromToys;
     console.log(`Not enough money! ${diff.toFixed(2)} lv needed.`);
   }
 
 }
 
+/* toyShop([
+  "157.95",
+  "20",
+  "30",
+  "10",
+  "5",
+  "5"
+]); */
 toyShop([
   "320",
   "8",
