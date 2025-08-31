@@ -12,6 +12,8 @@ function timeAfter15Minutes (input) {
 
   if (h > 23) {
     h = h - 24;
+  } else {
+    return h;
   }
   
   // we set up a condition to either to have or haven't a following 0 (null) in front of the minutes
@@ -23,3 +25,6 @@ function timeAfter15Minutes (input) {
   
 }
 timeAfter15Minutes(["23","59"]);
+
+let DateToday = new Date();
+console.log(DateToday);
