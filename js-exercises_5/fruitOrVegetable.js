@@ -1,7 +1,7 @@
 function fruitOrVegetable (input) {
   let product = input[0];
 
-  product = product + " and one bear"; 
+  product = product + " and one bee r"; 
 
   switch (product) {
     case "banana":
