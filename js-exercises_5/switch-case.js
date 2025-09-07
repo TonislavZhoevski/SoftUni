@@ -1,11 +1,24 @@
-function solve () {
-  let dayNumber = 1;
+function solve (input) {
+  const dayOfWeek = input[0];
 
-  if (dayNumber == 1) {
-    console.log("Monday");
-  } else if (dayNumber == 2) {
-    console.log('Tuesday');
+  switch (dayOfWeek) {
+    case "Monday":
+    case "Tuesday":
+    case "Wednesday":
+    case "Thirsday":
+    case "Friday":
+      console.log("Working day");
+      break;
+    case "Saturday":
+    case "Sunday":
+      console.log("Weekend");
+      break;
+    default:
+      console.log("Error");
   }
 }
 
-solve();
+solve(["Monday"]);
+solve(["Wednesday"]);
+solve(["Sunday"]);
+solve(["bananas"]);
