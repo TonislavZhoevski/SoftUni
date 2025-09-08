@@ -4,30 +4,20 @@ function godzilaVsKingKong (input) {
     let cloteOneStaffPrice = Number(input[2]);
 
     let decor = budget * 0.1;
-    let discount = extraStaff * 0.9;
+    // console.log(decor);
 
-    let clotesTotalPriceDiscountNo = cloteOneStaffPrice * extraStaff;
-    console.log(clotesTotalPriceDiscountNo);
-    
-    let clotesTotalPriceDiscountYes = clotesTotalPriceDiscountNo - discount;
-    console.log(clotesTotalPriceDiscountYes);
-    
+    let clotesFinalPrice = extraStaff * cloteOneStaffPrice;
 
-
-    let finalPriceClotes = 0;
-    if (extraStaff > 150) {
-        finalPriceClotes = clotesTotalPriceDiscountYes;
-    } else {
-        finalPriceClotes = clotesTotalPriceDiscountNo;
+    if ( extraStaff > 150) {
+        clotesFinalPrice = clotesFinalPrice * 0.9;
     }
+    
 
-    let totalFinalPrice = decor + finalPriceClotes;
-
-    let diff = Math.abs(totalFinalPrice - budget);
-
-    if (totalFinalPrice > budget) {
+    let totalPrice = decor + clotesFinalPrice;
+    let diff = Math.abs(totalPrice - budget);
+    if (totalPrice > budget) {
         console.log(`Not enough money!\nWingard needs ${diff.toFixed(2)} leva more.`);
-    } else {
+    } else if (totalPrice <= budget) {
         console.log(`Action!\nWingard starts filming with ${diff.toFixed(2)} leva left.`);
     }
 
