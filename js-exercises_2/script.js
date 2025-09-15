@@ -10,5 +10,7 @@ function demo (input) {
     console.log("Greater than 200");
   }
 
+  console.log();
+
 }
 demo();
