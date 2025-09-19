@@ -1,6 +1,9 @@
-function calculatorDeposit (deposit, timeDeposit, yearInterestRate) {
-    let sum = deposit + timeDeposit * ((deposit * yearInterestRate) / 12);
+function calculatorDeposit (deposit, timeDeposit, yearIntRatePercentage) {
+
+    let yearIntRate = yearIntRatePercentage / 100;
+
+    let sum = deposit + timeDeposit * ((deposit * yearIntRate) / 12);
     console.log(sum);
     
 }
-calculatorDeposit(200, 3, 5.7);
+calculatorDeposit(2350, 6, 7);
