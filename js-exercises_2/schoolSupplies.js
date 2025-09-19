@@ -11,6 +11,5 @@ function schoolSupplies (pensCount, markersCont, cleanAllLiters, discountPercent
     
     console.log(finalPrice);
     
-    
 }
-schoolSupplies(2, 3, 4, 25);
+schoolSupplies(4, 2, 5, 13);
