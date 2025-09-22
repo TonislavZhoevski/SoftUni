@@ -40,7 +40,7 @@ function newHouse(input) {
 
   let diff = Math.abs(money - budget);
   
-  if (money < budget) {
+  if (money <= budget) {
     console.log(`Hey, you have a great garden with ${count} ${type} and ${diff.toFixed(2)} leva more!`);
   } else {
     console.log(`Not enough money, you need ${diff.toFixed(2)} leva more.`);
