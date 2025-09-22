@@ -1,6 +1,4 @@
-function greaterNumber (input) {
-    let num1 = Number(input[0]);
-    let num2 = Number(input[1]);
+function greaterNumber (num1, num2) {
 
     if ( num1 > num2 ) {
         console.log(num1);
@@ -8,4 +6,4 @@ function greaterNumber (input) {
         console.log(num2);
     }
 }
-greaterNumber(["-5","5"]);
+greaterNumber(-5, 5);

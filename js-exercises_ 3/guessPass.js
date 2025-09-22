@@ -1,14 +1,13 @@
-function guessPassword () {
-    let myPass = "You are the best version of yourself in the fuckin World!";
-    let yourPass = "You are the best version of yourself in the fuckin World?";
+function guessPassword (myPass) {
+    let yourPass = "s3cr3t!P@ssw0rd";
 
     let isValidPass = myPass === yourPass;
 
     if (isValidPass === true) {
-        console.log("Welcome!");
+        console.log("Welcome");
     } else {
-        console.log("Wrong!");
+        console.log("Wrong password!");
     }
 
 }
-guessPassword();
+guessPassword("qwerty");
