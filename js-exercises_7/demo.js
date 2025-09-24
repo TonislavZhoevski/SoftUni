@@ -1,22 +1,10 @@
-function forLoop() {
-  // let a = 4;
+function forLoop(input) {
 
-  // console.log(a); // 4
-  // console.log(a--); // 4
-  // console.log(a); // 3
-  // console.log(--a); // 2 
+  let start = Number(input[0]);
+  let end = Number(input[1]);
 
-  
- 
-  // console.log(a); // 4
-  // console.log(a++); // 4
-  // console.log(a); // 5
-  // console.log(++a); // 6
-  
-  for (let a = 1; a <= 10; a++) {
-    console.log(`a value: ${a}`);
+  for (let a = start; a <= end; a += 2) {
+    console.log(a);
   }
-
-
 }
-forLoop();
+forLoop(["2", "12"]);
