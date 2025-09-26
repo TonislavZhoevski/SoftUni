@@ -1,8 +1,4 @@
-function fishingBoat(input) {
-  let budget = Number(input[0]);
-  let season = input[1];
-  let countFisherMan = Number(input[2]);
-
+function fishingBoat(budget, season, countFisherMan) {
   rent = 0;
 
   if (season === "Spring") {
@@ -33,4 +29,4 @@ function fishingBoat(input) {
     console.log(`Not enough money! You need ${diff.toFixed(2)} leva.`);
   }
 }
-fishingBoat(["2000", "Winter", "13"]);
+fishingBoat(2000, "Winter", 13);
