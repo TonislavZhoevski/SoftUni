@@ -4,24 +4,19 @@ function solve(input) {
   let endNum = Math.max(Number(input[0]), Number(input[1])); //100
 
   let sum = 0;
+  let rowOfNumbers = " ";
 
   for (let currentNum = startNum; currentNum <= endNum; currentNum++) {
     
     if (currentNum % 9 === 0) {
-      sum += currentNum; // or sum = sum + currentNum; 
+      sum += currentNum; // or sum = sum + currentNum;
+      rowOfNumbers += `${currentNum} `;
     }
 
   }
 
   console.log(`The sum: ${sum}`);
-
-  for (let currentNum = startNum; currentNum <= endNum; currentNum++) {
-    
-    if (currentNum % 9 === 0) {
-      console.log(currentNum);
-    }
-
-  }
+  console.log(rowOfNumbers);
 
 }
-solve(["200", "100"]);
+solve(["100", "200"]);
