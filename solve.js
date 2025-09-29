@@ -1,22 +1,34 @@
 function solve(input) {
 
-  let startNum = Math.min(Number(input[0]), Number(input[1])); //200
-  let endNum = Math.max(Number(input[0]), Number(input[1])); //100
+  let tournaments = Number(input[0]);
+  let startingPoints = Number(input[1]);
+  let winPoints = 0;
+  let wins = 0;
 
-  let sum = 0;
-  let rowOfNumbers = " ";
+  for (let i = 2; i < input.length; i++) {
 
-  for (let currentNum = startNum; currentNum <= endNum; currentNum++) {
-    
-    if (currentNum % 9 === 0) {
-      sum += currentNum; // or sum = sum + currentNum;
-      rowOfNumbers += `${currentNum} `;
+    let score = input[i];
+
+    switch (score) {
+      case "W": winPoints += 2000;
+        wins++;
+        break;
+      case "F": winPoints += 1200;
+        break;
+      case "SF": winPoints += 720;
+        break;
     }
 
   }
 
-  console.log(`The sum: ${sum}`);
-  console.log(rowOfNumbers);
+  let avgPoints = winPoints / tournaments;
+  let percentWon
+
+  console.log(avgPoints);
+
+  // console.log(`Final points: ${}`);
+  // console.log(`Avarage points: ${}`);
+  // console.log(`${}%`);
 
 }
-solve(["100", "200"]);
+solve(["5", "1400", "F", "SF", "W", "W", "SF"]);
