@@ -18,17 +18,15 @@ function solve(input) {
       case "SF": winPoints += 720;
         break;
     }
-
   }
 
   let avgPoints = winPoints / tournaments;
-  let percentWon
+  let percentWonTournaments = (wins / tournaments) * 100;
+  let finalPoints = startingPoints + winPoints;
 
-  console.log(avgPoints);
-
-  // console.log(`Final points: ${}`);
-  // console.log(`Avarage points: ${}`);
-  // console.log(`${}%`);
+  console.log(`Final points: ${finalPoints}`);
+  console.log(`Avarage points: ${Math.floor(avgPoints)}`);
+  console.log(`${percentWonTournaments.toFixed(2)}%`);
 
 }
 solve(["5", "1400", "F", "SF", "W", "W", "SF"]);
