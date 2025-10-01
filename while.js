@@ -1,19 +1,27 @@
-function demo() {
+function demo(input) {
   
-  // от начална точка на диапазона 'х' до крайна точка на диапазона 'у' при зададените ни стойности от променливите, да се изпълнява   
-  for (let a = 1; a <= 5; a++) {
-    console.log(a);
-  }
+  let budget = Number(input[0]);
+  let index = 1; // help for the next array, couse we can increment/decrement it
+  let product = input[index]; // it stores the value of 'index' through iterating the 'input' variable(array in this case).
 
-  console.log("------------");
-  
-  // докато нещо не се случи със зададените стойности от променливите, изпълняваме кода
-  let num = 1;
-  while (num <= 5) {
-    console.log(num);
-    num++;
+  while (budget > 0) /* it is not 0 yet */  {
+    
+    switch (product) {
+      case "meat": budget -= 30; break;
+      case "coffee": budget -= 10; break;
+      case "fruits": budget -= 20; break;
+      case "milk": budget -= 5; break;
+    }
+    index++;
+    product = input[index];
+
   }
-  console.log(num);
+  console.log(`Money left: ${budget}`);
 
 }
-demo()
+demo(["100", "meat", "coffee", "fruits", "meat", "fruits", "milk"]);
+
+// meet - 30 lv/kg
+// coffee - 10 lv/kg
+// fruits - 20 lv/kg
+// milk - k lv/l
