@@ -3,7 +3,9 @@ function demo() {
   // for (let a = 1; a <= 10; a++) {
     
   //   if (a === 7) {
-  //     break;
+      
+  //     continue;
+
   //   }
   //   console.log(a);
 
@@ -11,13 +13,13 @@ function demo() {
 
   // console.log("-----------");
 
-  let num = 1;
+  let num = 0;
   while (num <= 10) {
+    num++;
     if (num === 7) {
-      break;
+      continue;
     }
     console.log(num);
-    num++;
   }
 
   console.log("after loop");
