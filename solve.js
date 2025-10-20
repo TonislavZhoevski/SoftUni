@@ -1,12 +1,28 @@
 function solve() {
 
   let i = 0;
-  while (i < 18) {
-    i++;
-    if (i % 2 === 0) {
-      console.log(i);
+  while (i < 4) {
+    switch (i) {
+      case 1: console.log(i);
+      case 2: console.log(i); break;
+      case 3: console.log(i); break;
     }
+    
+    i++;
+
   }
+
+  /* let i = 0;
+  while (i < 4) {
+    switch (i) {
+      case 1: console.log(i);
+      case 2: console.log('tha f*ckin magic'); break;
+      case 3: console.log(i); break;
+    }
+
+    i++;
+
+  } */
 
 }
 solve();
