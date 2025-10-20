@@ -1,11 +1,11 @@
 function solve() {
 
   let i = 0;
-  while (i < 10) {
-    console.log("SoftUni");
+  while (i < 18) {
     i++;
-    if (i === 10)
-      break;
+    if (i % 2 === 0) {
+      console.log(i);
+    }
   }
 
 }
