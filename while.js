@@ -1,30 +1,16 @@
-function demo() {
+function demo(input) {
   
-  // for (let a = 1; a <= 10; a++) {
-    
-  //   if (a === 7) {
-      
-  //     return;
+  let index = 0;
+  let currentRow = input[index];
+  let maxNumber = Number.MIN_VALUE;
 
-  //   }
-  //   console.log(a);
+  while (currentRow !== 'Stop') {
+    let currentNumber = Number(currentRow);
 
-  // }
-
-  // console.log("-----------");
-
-  let num = 1;
-  while (num <= 10) {
-    
-    if (num === 7) {
-      return;
+    if (currentNumber < maxNumber) {
+      maxNumber = currentNumber;
     }
-    
-    console.log(num);
-    num++;
   }
 
-  console.log("after loop");
-
 }
-demo();
+demo(["100", "99", "80", "70", "Stop"]);
