@@ -1,4 +1,4 @@
-function solve() {
+/* function solve() {
 
   let i = 0;
   while (i < 4) {
@@ -12,7 +12,7 @@ function solve() {
 
   }
 
-  /* let i = 0;
+  let i = 0;
   while (i < 4) {
     switch (i) {
       case 1: console.log(i);
@@ -22,7 +22,9 @@ function solve() {
 
     i++;
 
-  } */
+  }
 
 }
-solve();
+solve(); */
+
+
