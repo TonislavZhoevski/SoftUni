@@ -23,9 +23,12 @@ function cinemaTickets(input) {
         case "student": studentTickets++; break;
       }
       ticketsPerFilm++;
+      console.log(ticketsPerFilm);
+      index++;
     }
+    console.log(filmName);
+    console.log(freeSpace);
   }
-  console.log(ticketsPerFilm);
   
 
 }
@@ -36,7 +39,7 @@ cinemaTickets(["Taxi",
   "student",
   "student",
   "standard",
-  "standart",
+  "standard",
   "End",
   "Scary Movie",
   "6",
