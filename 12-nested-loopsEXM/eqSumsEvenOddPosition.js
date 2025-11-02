@@ -1,6 +1,4 @@
-function eqSumsEvenOddPosition(input) {
-  let firstNum = Number(input[0]);
-  let secondNum = Number(input[1]);
+function eqSumsEvenOddPosition(firstNum, secondNum) {
   let printLine = "";
 
   for (let i = firstNum; i <= secondNum; i++) {
@@ -21,5 +19,5 @@ function eqSumsEvenOddPosition(input) {
   }
   console.log(printLine);
 }
-// eqSumsEvenOddPosition(["100000", "100050"]);
-eqSumsEvenOddPosition(["123456","124000"]);
+// eqSumsEvenOddPosition(100000, 100050);
+eqSumsEvenOddPosition(123456, 124000);
