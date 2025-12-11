@@ -18,7 +18,7 @@ function sumPrimeNonPrime(input) {
     }
 
     if (num === 0 || num === 1) {
-      sumPrimeNumber += num;
+      sumNonPrimeNumber += num;
       command = input[index];
       index++;
       continue;
