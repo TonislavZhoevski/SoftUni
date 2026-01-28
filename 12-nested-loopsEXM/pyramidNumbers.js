@@ -1,24 +1,27 @@
-function pyramidNumbers(n) {
+function pyramidNumbers(number) {
+  let printLine = ''; 
+  let isReached = false;  
+  let currentNumber = 1;
   
-  let current = 1;
-  let isBigger = false;
-  let printCurrentLine = "";
-
-  for (let rows = 1; rows <= n; rows++) {
-    for (let cols = 1; cols <= rows; cols++) {
-      if (current > n) {
-        isBigger = true;
+  for (let row = 1; row <= number; row++) {
+    for (let col = 1; col <= row; col++) {
+      printLine += currentNumber + ' ';
+      
+      if (currentNumber === number) {
+        isReached = true;
         break;
       }
-      printCurrentLine += current + " ";
-      current++;
+      currentNumber++; 
     }
-    console.log(printCurrentLine);
-    printCurrentLine = "";
-    if (isBigger) {
+
+    console.log(printLine);  
+    printLine = ''; 
+
+    if (isReached) {
       break;
-    }
+    } 
+    
   }
 
 }
-pyramidNumbers(["7"]);
+pyramidNumbers(7);
